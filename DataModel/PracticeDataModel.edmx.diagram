@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cf421568fab64feebdce0dafadc5bb94" Name="Diagram1">
+        <EntityTypeShape EntityType="PracticeModel.tblBranch" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PracticeModel.tblCompany" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PracticeModel.tblDepartment" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="PracticeModel.FK_tblBranch_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="PracticeModel.FK_tblDepartment_tblBranch" ManuallyRouted="false" />
+        <AssociationConnector Association="PracticeModel.FK_tblDepartment_tblCompany" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

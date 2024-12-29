@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\DFS\\Akki\\MVC\\WebApplication1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{37A2B616-F7B0-4BDA-A910-D546BA4E8EB0}|WebApplication1.csproj|d:\\dfs\\akki\\mvc\\webapplication1\\datamodel\\practicedatamodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{37A2B616-F7B0-4BDA-A910-D546BA4E8EB0}|WebApplication1.csproj|solutionrelative:datamodel\\practicedatamodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PracticeDataModel.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\DFS\\Akki\\MVC\\WebApplication1\\DataModel\\PracticeDataModel.edmx",
+              "RelativeDocumentMoniker": "DataModel\\PracticeDataModel.edmx",
+              "ToolTip": "D:\\DFS\\Akki\\MVC\\WebApplication1\\DataModel\\PracticeDataModel.edmx [Diagram1]",
+              "RelativeToolTip": "DataModel\\PracticeDataModel.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-12-29T06:40:19.628Z",
+              "EditorCaption": " [Diagram1]"
             }
           ]
         }
