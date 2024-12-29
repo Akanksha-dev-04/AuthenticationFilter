@@ -11,10 +11,13 @@ namespace WebApplication1.DataModel
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tblDepartment
     {
         public int DepartmentId { get; set; }
+
+        [StringLength(150, MinimumLength = 3, ErrorMessage = "Company Name must be atleast 3 charachters")]
         public string Department { get; set; }
         public Nullable<int> BranchId { get; set; }
         public Nullable<int> CompanyId { get; set; }

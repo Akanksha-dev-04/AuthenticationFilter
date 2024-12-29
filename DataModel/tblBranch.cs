@@ -11,7 +11,8 @@ namespace WebApplication1.DataModel
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tblBranch
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,8 @@ namespace WebApplication1.DataModel
         }
     
         public int BranchId { get; set; }
+
+        [StringLength(150, MinimumLength = 3, ErrorMessage = "Company Name must be atleast 3 charachters")]
         public string BranchName { get; set; }
         public Nullable<int> CompanyId { get; set; }
     

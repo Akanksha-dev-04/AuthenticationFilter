@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+<html>
+<head></head>
+<body>
+    <h2>Dashboard</h2>
+       
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="bg-info" style="border:2px solid black;border-radius:15px;text-align:center;">
+                    <p>
+                        <h5><a href="@Url.Action("Companies","Practice")">Companies</a> </h5>
+                        <h6>@ViewBag.CompanyCount</h6>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-info" style="border:2px solid black;border-radius:15px;text-align:center;">
+                    <p>
+                        <h5><a href="@Url.Action("Branches","Practice")">Branches</a> </h5>
+
+                        <h6>@ViewBag.BranchCount </h6>
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="bg-info" style="border:2px solid black;border-radius:15px;text-align:center;">
+                    <p>
+                        <h5><a href="@Url.Action("Departments","Practice")">Departments</a> </h5>
+                        <h6>@ViewBag.DepartmentCount</h6>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -11,7 +11,8 @@ namespace WebApplication1.DataModel
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tblCompany
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,8 +23,17 @@ namespace WebApplication1.DataModel
         }
     
         public int CompanyId { get; set; }
+
+        [Required]
+        [StringLength(150,MinimumLength =3,ErrorMessage ="Company Name must be atleast 3 charachters")]
         public string CompanyName { get; set; }
+
+        [Required]
         public string UserName { get; set; }
+
+        [Required]
+       
+        [RegularExpression(@"^(?=.*[._\-@&*#!?])[A-Z][a-z0-9._\-@&*#!?]{8,15}$")]
         public string Password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

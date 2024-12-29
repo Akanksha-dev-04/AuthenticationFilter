@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PracticeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblBranch">
+    <Key>
+      <PropertyRef Name="BranchId" />
+    </Key>
+    <Property Name="BranchId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BranchName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyId" Type="Int32" />
+    <NavigationProperty Name="tblCompany" Relationship="Self.FK_tblBranch_tblCompany" FromRole="tblBranch" ToRole="tblCompany" />
+    <NavigationProperty Name="tblDepartments" Relationship="Self.FK_tblDepartment_tblBranch" FromRole="tblBranch" ToRole="tblDepartment" />
+  </EntityType>
+  <EntityType Name="tblCompany">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblBranches" Relationship="Self.FK_tblBranch_tblCompany" FromRole="tblCompany" ToRole="tblBranch" />
+    <NavigationProperty Name="tblDepartments" Relationship="Self.FK_tblDepartment_tblCompany" FromRole="tblCompany" ToRole="tblDepartment" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BranchId" Type="Int32" />
+    <Property Name="CompanyId" Type="Int32" />
+    <NavigationProperty Name="tblBranch" Relationship="Self.FK_tblDepartment_tblBranch" FromRole="tblDepartment" ToRole="tblBranch" />
+    <NavigationProperty Name="tblCompany" Relationship="Self.FK_tblDepartment_tblCompany" FromRole="tblDepartment" ToRole="tblCompany" />
+  </EntityType>
+  <Association Name="FK_tblBranch_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tblBranch" Type="Self.tblBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="tblBranch">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDepartment_tblBranch">
+    <End Role="tblBranch" Type="Self.tblBranch" Multiplicity="0..1" />
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="BranchId" />
+      </Principal>
+      <Dependent Role="tblDepartment">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDepartment_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="tblDepartment">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PracticeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblBranches" EntityType="Self.tblBranch" />
+    <EntitySet Name="tblCompanies" EntityType="Self.tblCompany" />
+    <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+    <AssociationSet Name="FK_tblBranch_tblCompany" Association="Self.FK_tblBranch_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompanies" />
+      <End Role="tblBranch" EntitySet="tblBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDepartment_tblBranch" Association="Self.FK_tblDepartment_tblBranch">
+      <End Role="tblBranch" EntitySet="tblBranches" />
+      <End Role="tblDepartment" EntitySet="tblDepartments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDepartment_tblCompany" Association="Self.FK_tblDepartment_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompanies" />
+      <End Role="tblDepartment" EntitySet="tblDepartments" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\DFS\\Akki\\MVC\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{37A2B616-F7B0-4BDA-A910-D546BA4E8EB0}|WebApplication1.csproj|d:\\dfs\\akki\\mvc\\webapplication1\\datamodel\\practicedatamodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{37A2B616-F7B0-4BDA-A910-D546BA4E8EB0}|WebApplication1.csproj|solutionrelative:datamodel\\practicedatamodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+      "AbsoluteMoniker": "D:0:0:{37A2B616-F7B0-4BDA-A910-D546BA4E8EB0}|WebApplication1.csproj|d:\\dfs\\akki\\mvc\\webapplication1\\models\\customauthenticationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37A2B616-F7B0-4BDA-A910-D546BA4E8EB0}|WebApplication1.csproj|solutionrelative:models\\customauthenticationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PracticeDataModel.edmx [Diagram1]",
-              "DocumentMoniker": "D:\\DFS\\Akki\\MVC\\WebApplication1\\DataModel\\PracticeDataModel.edmx",
-              "RelativeDocumentMoniker": "DataModel\\PracticeDataModel.edmx",
-              "ToolTip": "D:\\DFS\\Akki\\MVC\\WebApplication1\\DataModel\\PracticeDataModel.edmx [Diagram1]",
-              "RelativeToolTip": "DataModel\\PracticeDataModel.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-12-29T06:40:19.628Z",
-              "EditorCaption": " [Diagram1]"
+              "Title": "CustomAuthenticationFilter.cs",
+              "DocumentMoniker": "D:\\DFS\\Akki\\MVC\\WebApplication1\\Models\\CustomAuthenticationFilter.cs",
+              "RelativeDocumentMoniker": "Models\\CustomAuthenticationFilter.cs",
+              "ToolTip": "D:\\DFS\\Akki\\MVC\\WebApplication1\\Models\\CustomAuthenticationFilter.cs",
+              "RelativeToolTip": "Models\\CustomAuthenticationFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T09:55:07.203Z",
+              "EditorCaption": ""
             }
           ]
         }
